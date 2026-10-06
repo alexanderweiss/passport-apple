@@ -122,10 +122,10 @@ Apple currently returns a User ID that is tied to you Team ID. That means, the s
 Also, if the User wants to, their name and email address is returned:
 
 ```js
-{ id, name: { firstName, lastName }, email } = profile;
+{ id, name: { firstName, lastName }, email, emailVerified, isPrivateEmail } = profile;
 ```
 
-*Note that the `name` and `email` properties are only returned on the first login the user*.
+*Note that on subsequent logins, only `id` is being returned, the other properties are only returned on the first login*
 
 #### Why not just use [passport-oauth2](https://github.com/jaredhanson/passport-oauth2/)?
 
